@@ -6,20 +6,21 @@ function saveData() {
   const grade3 = parseFloat(document.getElementById('Nota3').value);
   const grade4 = parseFloat(document.getElementById('Nota4').value);
 
+
   if (isNaN(grade1) || isNaN(grade2) || isNaN(grade3) || isNaN(grade4)) {
-    const toast = document.createElement("div");
-    toast.innerHTML = "Por favor, ingresa todas las notas correctamente.";
-    toast.style.position = "absolute";
-    toast.style.top = "50%";
-    toast.style.left = "50%";
-    toast.style.transform = "translate(-50%, -50%)";
-    toast.style.background = "rgba(255, 255, 255, 0.8)";
-    toast.style.padding = "10px";
-    toast.style.borderRadius = "10px";
-    toast.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
-    document.body.appendChild(toast);
+    const Msg = document.createElement("div");
+    Msg.innerHTML = "Por favor, ingresa todas las notas correctamente.";
+    Msg.style.position = "absolute";
+    Msg.style.top = "50%";
+    Msg.style.left = "50%";
+    Msg.style.transform = "translate(-50%, -50%)";
+    Msg.style.background = "rgba(255, 255, 255, 0.8)";
+    Msg.style.padding = "10px";
+    Msg.style.borderRadius = "10px";
+    Msg.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
+    document.body.appendChild(Msg);
     setTimeout(() => {
-      document.body.removeChild(toast);
+      document.body.removeChild(Msg);
     }, 3000);
     return;
   }
@@ -34,19 +35,19 @@ function saveData() {
   });
 
   if (codeExists) {
-    const toast = document.createElement("div");
-    toast.innerHTML = "Error: El código ya existe.";
-    toast.style.position = "absolute";
-    toast.style.top = "50%";
-    toast.style.left = "50%";
-    toast.style.transform = "translate(-50%, -50%)";
-    toast.style.background = "rgba(255, 255, 255, 0.8)";
-    toast.style.padding = "10px";
-    toast.style.borderRadius = "10px";
-    toast.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
-    document.body.appendChild(toast);
+    const Msg = document.createElement("div");
+    Msg.innerHTML = "Error: El código ya existe.";
+    Msg.style.position = "absolute";
+    Msg.style.top = "50%";
+    Msg.style.left = "50%";
+    Msg.style.transform = "translate(-50%, -50%)";
+    Msg.style.background = "rgba(255, 255, 255, 0.8)";
+    Msg.style.padding = "10px";
+    Msg.style.borderRadius = "10px";
+    Msg.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
+    document.body.appendChild(Msg);
     setTimeout(() => {
-      document.body.removeChild(toast);
+      document.body.removeChild(Msg);
     }, 3000);
     return;
   }
