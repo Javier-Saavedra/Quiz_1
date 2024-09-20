@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTAS FINALES</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+<h2>NOTAS FINALES </h2>
+<form id="registro"> 
+    <table class="form-table">
+        <tr>
+            <td><label for="codigo">Código del Estudiante:</label></td>
+            <td><input type="text" id="codigo" required></td>
+        </tr>
+        <tr>
+            <td><label for="nombre">Nombre:</label></td>
+            <td><input type="text" id="nombre" required></td>
+        </tr>
+        <tr>
+            <td><label for="Nota1">Nota del Primer 20%:</label></td>
+            <td><input type="number" id="Nota1" step="0.01" required></td>
+        </tr>
+        <tr>
+            <td><label for="Nota2">Nota del Segundo 20%:</label></td>
+            <td><input type="number" id="Nota2" step="0.01" required></td>
+        </tr>
+        <tr>
+            <td><label for="Nota3">Nota del Tercer 20%:</label></td>
+            <td><input type="number" id="Nota3" step="0.01" required></td>
+        </tr>
+        <tr>
+            <td><label for="Nota4">Nota del Último 40%:</label></td>
+            <td><input type="number" id="Nota4" step="0.01" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" id="guardar" onclick="saveData()">Guardar</button></td>
+        </tr>
+    </table>
+</form>
+
+<h2>Lista de Estudiantes</h2>
+<table id="estudiantes"> 
+    <thead>
+        <tr>
+            <th>Acción</th>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Nota 1 (20%)</th>
+            <th>Nota 2 (20%)</th>
+            <th>Nota 3 (20%)</th>
+            <th>Nota 4 (40%)</th>
+            <th>Nota Final</th>
+            <th>Definición</th>
+            <th>Aprobado</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script src="App.js"></script> 
+</body>
+</html>
